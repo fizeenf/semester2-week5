@@ -18,7 +18,7 @@ int main(void) {
 
 	int len = strlen(hex);
 
-	for(int i=0; i < len; i++) {
+	for(int i = 0; i < len; i++) {
 
        char c = hex[i];
        int value;
@@ -27,24 +27,28 @@ int main(void) {
 	 
 	     if(c >= '0' && c <= '9') {
 
-		value = c - '0';
+		    value = c - '0';
 
 	     } else if (c >= 'A' && c <= 'F') {
 
-		value = c - 'A' + 10;
+		    value = c - 'A' + 10;
 
-	     } else if (c >= 'a' && c 'f' ) {
+	     } else if (c >= 'a' && c <= 'f') {
 
-	    value = c-'a' + 10; 
+	        value = c-'a' + 10; 
 	    } else {
-		printf("Error: Invalid Hexadecimal\n");
-
-		return 0;
+		    printf("Error: Invalid Hexadecimal\n");
+			
+			return 0;
 	    }
     
 	// printf("Error: Invalid Hexadecimal\n");
 	
 	// print the decimal result
-	    decimal = decimal*16 + value;
- 
+	    decimal = decimal * 16 + value;
+
+	printf("Decimal : %ld\n" , decimal);
+
+	return 0;
+	
     }
